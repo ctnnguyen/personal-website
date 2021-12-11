@@ -8,7 +8,8 @@
     "baseUrl": "./",
     "paths": {
       "components/*": ["./src/components/*"],
-      "pages/*": ["./src/pages/*"]
+      "pages/*": ["./src/pages/*"],
+      "utils/*": ["./src/utils/*"]
     },
     "noEmit": true,
     "strict": true,
