@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "build": "snowpack build",
+    "deploy": "gh-pages -d build",
     "start": "snowpack dev"
   },
   "dependencies": {
@@ -18,6 +19,7 @@
     "@types/react": "17.0.4",
     "@types/react-dom": "17.0.3",
     "@types/snowpack-env": "2.3.3",
+    "gh-pages": "3.2.3",
     "snowpack": "3.3.7",
     "typescript": "4.5.3"
   }
