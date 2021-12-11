@@ -19,6 +19,7 @@ export default {
   buildOptions: {
     out: "build",
     baseUrl: "/personal-website",
+    metaUrlPath: "snowpack",
   },
   alias: {
     "components": "./src/components",
