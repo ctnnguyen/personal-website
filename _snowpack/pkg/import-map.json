@@ -1,6 +1,11 @@
 {
   "imports": {
+    "bootstrap/dist/css/bootstrap.min.css": "./bootstrap/dist/css/bootstrap.min.css",
     "react": "./react.js",
-    "react-dom": "./react-dom.js"
+    "react-bootstrap/Col": "./react-bootstrap/Col.js",
+    "react-bootstrap/Container": "./react-bootstrap/Container.js",
+    "react-bootstrap/Row": "./react-bootstrap/Row.js",
+    "react-dom": "./react-dom.js",
+    "styled-components": "./styled-components.js"
   }
 }
