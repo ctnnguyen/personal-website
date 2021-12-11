@@ -18,7 +18,7 @@ export default {
   },
   buildOptions: {
     out: "build",
-    baseUrl: "/",
+    baseUrl: "/personal-website",
   },
   alias: {
     "components": "./src/components",
