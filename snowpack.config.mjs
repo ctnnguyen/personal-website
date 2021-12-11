@@ -19,6 +19,7 @@ export default {
   buildOptions: {
     out: "build",
     baseUrl: "/",
+    sourcemap: true,
   },
   alias: {
     "components": "./src/components",
