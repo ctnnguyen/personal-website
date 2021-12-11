@@ -1,6 +1,6 @@
-import React from "../../_snowpack/pkg/react.js";
-import Container from "../../_snowpack/pkg/react-bootstrap/Container.js";
-import styled from "../../_snowpack/pkg/styled-components.js";
+import React from "../../snowpack/pkg/react.js";
+import Container from "../../snowpack/pkg/react-bootstrap/Container.js";
+import styled from "../../snowpack/pkg/styled-components.js";
 import {colors, mediaQueries} from "../utils/theme.js";
 import KebabMenu from "./KebabMenu.js";
 const Wrapper = styled.div`

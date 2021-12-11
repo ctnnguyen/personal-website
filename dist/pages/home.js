@@ -1,8 +1,8 @@
-import React from "../../_snowpack/pkg/react.js";
-import Col from "../../_snowpack/pkg/react-bootstrap/Col.js";
-import Container from "../../_snowpack/pkg/react-bootstrap/Container.js";
-import Row from "../../_snowpack/pkg/react-bootstrap/Row.js";
-import styled from "../../_snowpack/pkg/styled-components.js";
+import React from "../../snowpack/pkg/react.js";
+import Col from "../../snowpack/pkg/react-bootstrap/Col.js";
+import Container from "../../snowpack/pkg/react-bootstrap/Container.js";
+import Row from "../../snowpack/pkg/react-bootstrap/Row.js";
+import styled from "../../snowpack/pkg/styled-components.js";
 import Navbar from "../components/Navbar.js";
 import {colors, fontSizes, fontWeights} from "../utils/theme.js";
 const StyledContainer = styled(Container)`

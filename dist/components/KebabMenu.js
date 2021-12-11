@@ -1,5 +1,5 @@
-import React from "../../_snowpack/pkg/react.js";
-import styled from "../../_snowpack/pkg/styled-components.js";
+import React from "../../snowpack/pkg/react.js";
+import styled from "../../snowpack/pkg/styled-components.js";
 import {colors} from "../utils/theme.js";
 const Container = styled.div`
   display: flex;
