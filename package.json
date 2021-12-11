@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "snowpack dev",
-    "build": "snowpack build"
+    "build": "snowpack build",
+    "start": "snowpack dev"
   },
   "dependencies": {
     "bootstrap": "5.1.3",
