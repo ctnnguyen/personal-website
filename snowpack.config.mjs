@@ -22,8 +22,8 @@ export default {
     metaUrlPath: 'snowpack',
   },
   alias: {
-    components: './src/components',
-    pages: './src/pages',
-    utils: './src/utils',
+    'components': './src/components',
+    'pages': './src/pages',
+    'utils': './src/utils',
   },
 }
