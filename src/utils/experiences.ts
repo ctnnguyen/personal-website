@@ -37,12 +37,14 @@ export const experiences: Experience[] = [
   },
   {
     employer: 'VJ Engineering, Inc.',
-    startDate: new Date(2016, 2),
+    startDate: new Date(2016, 5),
     position: 'Software Engineer Intern',
   },
   {
     employer: 'Cal Poly Pomona',
-    startDate: new Date(2016, 5),
+    startDate: new Date(2016, 2),
     position: 'Teaching Assistant',
   },
 ]
+
+export const getExperienceByEmployer = (employer: string) => experiences.filter(experience => experience.employer === employer)

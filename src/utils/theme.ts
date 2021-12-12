@@ -7,7 +7,7 @@ export const colors = {
 
 export const fontSizes = {
   textSm: '14px',
-  header: '50px',
+  header: '30px',
 }
 
 export const fontWeights = {
