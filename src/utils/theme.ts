@@ -6,10 +6,12 @@ export const colors = {
 }
 
 export const fontSizes = {
+  textSm: '14px',
   header: '50px',
 }
 
 export const fontWeights = {
+  bold: 500,
   heavy: 900,
 }
 

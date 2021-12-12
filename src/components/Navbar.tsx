@@ -10,8 +10,9 @@ interface Props {
 
 const Wrapper = styled.div<Props>`
   background-color: ${props => props.color};
-  position: sticky;
+  position: absolute;
   top: 0;
+  width: 100%;
 `
 
 const StyledContainer = styled(Container)`
@@ -19,6 +20,7 @@ const StyledContainer = styled(Container)`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 20px;
   
   @media only screen and (min-width: ${mediaQueries.md}) {
     padding: 0 50px;
