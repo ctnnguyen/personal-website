@@ -1,6 +1,6 @@
 export const pages = {
-  home: "/",
-  timeline: "/timeline",
+  home: "",
+  timeline: "timeline",
   skills: "/skills",
-  links: "/links"
+  links: "links"
 };
