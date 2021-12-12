@@ -3,7 +3,11 @@ import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import styled from 'styled-components'
+import { Link } from 'wouter'
+
 import Navbar from 'components/Navbar'
+import Timeline from 'components/timeline/Timeline'
+import { pages } from 'utils/router'
 import { colors, fontSizes, fontWeights } from 'utils/theme'
 
 const StyledContainer = styled(Container)`
@@ -23,6 +27,7 @@ const Text = styled.p`
   font-size: ${fontSizes.header};
   font-weight: ${fontWeights.heavy};
   letter-spacing: 3px;
+  cursor: pointer;
   text-shadow:
     -1px -1px 0 ${colors.greyLight},
     1px -1px 0 ${colors.greyLight},
@@ -30,25 +35,34 @@ const Text = styled.p`
     1px 1px 0 ${colors.greyLight};
 `
 
-const Home = () => {
+const HomePage = () => {
   return (
     <>
       <Navbar color={colors.greyDark} />
+      <Timeline />
+      {/*
       <StyledContainer fluid>
         <Row>
           <Column xs={12} sm={12} md={4}>
-            <Text>TIMELINE</Text>
+            <Link href={pages.timeline}>
+              <Text>TIMELINE</Text>
+            </Link>
           </Column>
           <Column xs={12} sm={12} md={4}>
-            <Text>SKILLS</Text>
+            <Link href={pages.skills}>
+              <Text>SKILLS</Text>
+            </Link>
           </Column>
           <Column xs={12} sm={12} md={4}>
-            <Text>LINKS</Text>
+            <Link href={pages.links}>
+              <Text>LINKS</Text>
+            </Link>
           </Column>
         </Row>
       </StyledContainer>
+      */}
     </>
   )
 }
 
-export default Home
+export default HomePage
