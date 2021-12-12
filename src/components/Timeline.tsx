@@ -2,17 +2,17 @@ import React from 'react'
 import Container from 'react-bootstrap/Container'
 import styled from 'styled-components'
 import { format } from 'date-fns'
+import { Link } from 'wouter'
 
+import { experiences } from 'utils/experiences'
+import { pages } from 'utils/router'
 import { colors, fontSizes, fontWeights } from 'utils/theme'
-import { experiences } from './experiences'
 
-// @todo fix hard-coding margin top to height of navbar
 const StyledContainer = styled(Container)`
-  margin-top: 100px;
   color: ${colors.greyDark};
   position: relative;
-  
-  &:before {
+
+  &::before {
     content: '';
     position: absolute;
     height: 100%;
@@ -23,23 +23,26 @@ const StyledContainer = styled(Container)`
 `
 
 const StyledList = styled.ul`
-  padding: 0;
+  padding: 20px 0 0;
 `
 
 const TimelineItem = styled.li`
-  margin-bottom: 50px;
   list-styled-type: none;
   display: flex;
   flex-direction: row;
   align-items: center;
+  
+  &:not(:last-child) {
+    margin-bottom: 50px;
+  }
 `
 
 const Circle = styled.span`
   display: inline-block;
   vertical-align: middle;
   margin: 0 20px;
-  
-  &:after {
+
+  &::after {
     content: '';
     width: 12px;
     height: 12px;
@@ -68,6 +71,15 @@ const Date = styled.p`
   font-weight: ${fontWeights.bold};
 `
 
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: ${colors.greyDark};
+  
+  &:hover, &:focus, &:active {
+    color: ${colors.greyDark};
+  }
+`
+
 const Employer = styled.p`
   font-weight: ${fontWeights.bold};
 `
@@ -88,8 +100,10 @@ const Timeline = () => (
             </DateContainer>
             <Circle />
             <Event>
-              <Employer>{experience.employer}</Employer>
-              <Position>{experience.position}</Position>
+              <StyledLink href={`${pages.experience}/${experience.employer}`}>
+                <Employer>{experience.employer}</Employer>
+                <Position>{experience.position}</Position>
+              </StyledLink>
             </Event>
           </TimelineItem>
         ))

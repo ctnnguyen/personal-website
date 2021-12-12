@@ -1,6 +1,7 @@
 import React from 'react'
 import Container from 'react-bootstrap/Container'
 import styled from 'styled-components'
+
 import { colors, mediaQueries } from 'utils/theme'
 import KebabMenu from './KebabMenu'
 
@@ -29,6 +30,7 @@ const StyledContainer = styled(Container)`
 
 const Brand = styled.p`
   letter-spacing: 2px;
+  color: ${colors.white}
 `
 
 const Separator = styled.hr<Props>`
