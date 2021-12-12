@@ -22,6 +22,7 @@ const StyledContainer = styled(Container)`
 `;
 const Brand = styled.p`
   letter-spacing: 2px;
+  color: ${colors.white}
 `;
 const Separator = styled.hr`
   border-bottom: 2px solid ${colors.greyLight};

@@ -182,6 +182,15 @@ const useRoute = (pattern) => {
   return useRouter().matcher(pattern, path);
 };
 
+// internal hook used by Link and Redirect in order to perform navigation
+const useNavigate = (options) => {
+  const navRef = react.useRef();
+  const [, navigate] = useLocation();
+
+  navRef.current = () => navigate(options.to || options.href, options);
+  return navRef;
+};
+
 const Route = ({ path, match, component, children }) => {
   const useRouteMatch = useRoute(path);
 
@@ -197,4 +206,44 @@ const Route = ({ path, match, component, children }) => {
   return typeof children === "function" ? children(params) : children;
 };
 
-export { Route };
+const Link = (props) => {
+  const navRef = useNavigate(props);
+  const { base } = useRouter();
+
+  let { to, href = to, children, onClick } = props;
+
+  const handleClick = react.useCallback(
+    (event) => {
+      // ignores the navigation when clicked using right mouse button or
+      // by holding a special modifier key: ctrl, command, win, alt, shift
+      if (
+        event.ctrlKey ||
+        event.metaKey ||
+        event.altKey ||
+        event.shiftKey ||
+        event.button !== 0
+      )
+        return;
+
+      event.preventDefault();
+      navRef.current();
+      onClick && onClick(event);
+    },
+    // navRef is a ref so it never changes
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [onClick]
+  );
+
+  // wraps children in `a` if needed
+  const extraProps = {
+    // handle nested routers and absolute paths
+    href: href[0] === "~" ? href.slice(1) : base + href,
+    onClick: handleClick,
+    to: null,
+  };
+  const jsx = react.isValidElement(children) ? children : react.createElement("a", props);
+
+  return react.cloneElement(jsx, extraProps);
+};
+
+export { Link, Route };

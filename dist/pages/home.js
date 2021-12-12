@@ -1,34 +1,19 @@
 import React from "../../snowpack/pkg/react.js";
-import Col from "../../snowpack/pkg/react-bootstrap/Col.js";
-import Container from "../../snowpack/pkg/react-bootstrap/Container.js";
 import styled from "../../snowpack/pkg/styled-components.js";
 import Navbar from "../components/Navbar.js";
-import Timeline from "../components/timeline/Timeline.js";
-import {colors, fontSizes, fontWeights} from "../utils/theme.js";
-const StyledContainer = styled(Container)`
-  background-color: ${colors.greyDark};
+import Timeline from "../components/Timeline.js";
+import {colors, fontSizes} from "../utils/theme.js";
+const Content = styled.div`
+  margin: 100px 0 200px;
 `;
-const Column = styled(Col)`
-  height: calc(100vh - 72px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-const Text = styled.p`
-  color: ${colors.greyDark};
+const Title = styled.h1`
+  padding: 40px 0;
+  text-align: center;
   font-size: ${fontSizes.header};
-  font-weight: ${fontWeights.heavy};
-  letter-spacing: 3px;
-  cursor: pointer;
-  text-shadow:
-    -1px -1px 0 ${colors.greyLight},
-    1px -1px 0 ${colors.greyLight},
-    -1px 1px 0 ${colors.greyLight},
-    1px 1px 0 ${colors.greyLight};
 `;
 const HomePage = () => {
   return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement(Navbar, {
     color: colors.greyDark
-  }), /* @__PURE__ */ React.createElement(Timeline, null));
+  }), /* @__PURE__ */ React.createElement(Content, null, /* @__PURE__ */ React.createElement(Title, null, "Check out my work history."), /* @__PURE__ */ React.createElement(Timeline, null)));
 };
 export default HomePage;
