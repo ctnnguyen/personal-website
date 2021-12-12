@@ -5,9 +5,11 @@ export const colors = {
   white: "#FFFFFF"
 };
 export const fontSizes = {
+  textSm: "14px",
   header: "50px"
 };
 export const fontWeights = {
+  bold: 500,
   heavy: 900
 };
 export const mediaQueries = {

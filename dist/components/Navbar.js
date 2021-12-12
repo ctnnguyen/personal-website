@@ -5,14 +5,16 @@ import {colors, mediaQueries} from "../utils/theme.js";
 import KebabMenu from "./KebabMenu.js";
 const Wrapper = styled.div`
   background-color: ${(props) => props.color};
-  position: sticky;
+  position: absolute;
   top: 0;
+  width: 100%;
 `;
 const StyledContainer = styled(Container)`
   height: 70px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 20px;
   
   @media only screen and (min-width: ${mediaQueries.md}) {
     padding: 0 50px;
