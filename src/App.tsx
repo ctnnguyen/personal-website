@@ -3,14 +3,15 @@ import { Route } from 'wouter'
 
 import HomePage from 'pages/home'
 import LinksPage from 'pages/links'
+import { env } from 'utils/env'
 import { pages } from 'utils/router'
 
 const App = () => (
   <>
-    <Route path={pages.home}>
+    <Route path={`${env.baseUrl}${pages.home}`}>
       <HomePage />
     </Route>
-    <Route path={pages.links}>
+    <Route path={`${env.baseUrl}${pages.links}`}>
       <LinksPage />
     </Route>
   </>
